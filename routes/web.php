@@ -29,7 +29,7 @@ Route::get('pemesanan/destroy/{id}','PemesananController@destroy')->name('destro
 
 //Penumpang
 Route::get('penumpang' , 'PenumpangController@index');
-Route::get('penumpang/create/{id}','PenumpangController@create')->name('penumpang');
+Route::get('penumpang/create/','PenumpangController@create')->name('penumpang');
 Route::post('penumpang/store','PenumpangController@store');
 Route::get('penumpang/show','PenumpangController@show');
 Route::get('penumpang/edit/{id}','PenumpangController@edit')->name('editpenumpang');
@@ -38,7 +38,7 @@ Route::get('penumpang/destroy/{id}','PenumpangController@destroy')->name('destro
 
 //Petugas
 Route::get('petugas' , 'PetugasController@index');
-Route::get('petugas/create/{id}','PetugasController@create')->name('petugas');
+Route::get('petugas/create/','PetugasController@create')->name('petugas');
 Route::post('petugas/store','PetugasController@store');
 Route::get('petugas/show','PetugasController@show');
 Route::get('petugas/edit/{id}','PetugasController@edit')->name('editpetugas');
@@ -47,7 +47,7 @@ Route::get('petugas/destroy/{id}','PetugasController@destroy')->name('destroypet
 
 //Rute
 Route::get('rute' , 'RuteController@index');
-Route::get('rute/create/{id}','RuteController@create')->name('rute');
+Route::get('rute/create/','RuteController@create')->name('rute');
 Route::post('rute/store','RuteController@store');
 Route::get('rute/show','RuteController@show');
 Route::get('rute/edit/{id}','RuteController@edit')->name('editrute');
@@ -56,7 +56,7 @@ Route::get('rute/destroy/{id}','RuteController@destroy')->name('destroyrute');
 
 //Tranportasi
 Route::get('transportasi' , 'TransportasiController@index');
-Route::get('transportasi/create/{id}','TransportasiController@create')->name('transportasi');
+Route::get('transportasi/create','TransportasiController@create')->name('transportasi');
 Route::post('transportasi/store','TransportasiController@store');
 Route::get('transportasi/show','TransportasiController@show');
 Route::get('transportasi/edit/{id}','TransportasiController@edit')->name('edittransportasi');

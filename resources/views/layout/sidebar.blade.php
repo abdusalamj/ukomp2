@@ -7,46 +7,34 @@
         </div>
 
         <ul class="nav">
-            <li class="active">
-                <a href="{{url('/kamar')}}">
+            <li>
+                <a href="{{url('/pemesanan')}}">
                     <i class="pe-7s-graph"></i>
-                    <p>Kamar</p>
+                    <p>Pemesanan</p>
                 </a>
             </li>
             <li>
-                <a href="{{url('/obat')}}">
+                <a href="{{url('/penumpang')}}">
                     <i class="pe-7s-user"></i>
-                    <p>Obat</p>
+                    <p>Penumpang</p>
                 </a>
             </li>
             <li>
-                <a href="{{url('/jenis_obat')}}">
+                <a href="{{url('/rute')}}">
                     <i class="pe-7s-like"></i>
-                    <p>Jenis Obat</p>
+                    <p>Rute</p>
                 </a>
             </li>
             <li>
-                <a href="{{url('/resep')}}">
+                <a href="{{url('/transportasi')}}">
                     <i class="pe-7s-note2"></i>
-                    <p>Resep</p>
+                    <p>Transportasi</p>
                 </a>
             </li>
             <li>
-                <a href="{{url('/pasien')}}">
+                <a href="{{url('/petugas')}}">
                     <i class="pe-7s-news-paper"></i>
-                    <p>Pasien</p>
-                </a>
-            </li>
-            <li>
-                <a href="{{url('/dokter')}}">
-                    <i class="pe-7s-science"></i>
-                    <p>Dokter</p>
-                </a>
-            </li>
-            <li>
-                <a href="{{url('/fasilitas')}}">
-                    <i class="pe-7s-map-marker"></i>
-                    <p>Fasilitas</p>
+                    <p>Petugas</p>
                 </a>
             </li>
         </ul>
