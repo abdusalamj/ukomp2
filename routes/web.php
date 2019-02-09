@@ -51,14 +51,14 @@ Route::get('rute/create/','RuteController@create')->name('rute');
 Route::post('rute/store','RuteController@store');
 Route::get('rute/show','RuteController@show');
 Route::get('rute/edit/{id}','RuteController@edit')->name('editrute');
-Route::post('rute/update','RuteController@update');
+Route::post('rute/update','RuteController@update')->name('updaterute');
 Route::get('rute/destroy/{id}','RuteController@destroy')->name('destroyrute');
 
 //Tranportasi
 Route::get('transportasi' , 'TransportasiController@index');
-Route::get('transportasi/create','TransportasiController@create')->name('transportasi');
+Route::get('transportasi/create/','TransportasiController@create')->name('transportasi');
 Route::post('transportasi/store','TransportasiController@store');
 Route::get('transportasi/show','TransportasiController@show');
-Route::get('transportasi/edit/{id}','TransportasiController@edit')->name('edittransportasi');
+Route::get('transportasi/edit/{id_transportasi}','TransportasiController@edit')->name('edittransportasi');
 Route::post('transportasi/update','TransportasiController@update');
-Route::get('transportasi/destroy/{id}','TransportasiController@destroy')->name('destroypetugas');
+Route::get('transportasi/destroy/{id_transportasi}','TransportasiController@destroy')->name('destroytransportasi');

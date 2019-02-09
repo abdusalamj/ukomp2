@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Rute;
+use App\Transportasi;
 
 class RuteController extends Controller
 {
@@ -13,7 +15,8 @@ class RuteController extends Controller
      */
     public function index()
     {
-        //
+        $data = Rute::all();
+        return view('rute.index', compact('data'));
     }
 
     /**
@@ -23,7 +26,8 @@ class RuteController extends Controller
      */
     public function create()
     {
-        //
+        $data['transportasis'] = Transportasi::all();
+        return view('rute.create', $data);
     }
 
     /**
@@ -34,7 +38,17 @@ class RuteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $arr = str_random(3);
+        $rute = new Rute();
+        $rute->id_rute = "Ru-".$arr;
+        $rute->tujuan = $request->input('tujuan');
+        $rute->rute_awal = $request->input('rute_awal');
+        $rute->rute_akhir = $request->input('rute_akhir');
+        $rute->harga = $request->input('harga');
+        $rute->id_transportasi = $request->input('id_transportasi');
+
+        $rute->save();
+        return redirect('rute')->with('success','Rute Berhasil Ditambahkan');
     }
 
     /**
@@ -56,7 +70,9 @@ class RuteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $rute = Rute::find($id);
+        $transportasis = Transportasi::all();
+        return view('rute.edit', compact('rute', 'id', 'transportasis'));
     }
 
     /**
@@ -66,9 +82,18 @@ class RuteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $rute = Rute::find($request->input('id'));
+        $rute->id_rute = $request->input('id_rute');
+        $rute->tujuan = $request->input('tujuan');
+        $rute->rute_awal = $request->input('rute_awal');
+        $rute->rute_akhir = $request->input('rute_akhir');
+        $rute->harga = $request->input('harga');
+        $rute->id_transportasi = $request->input('id_transportasi');
+        $rute->save();
+
+        return redirect('rute')->with('success','Rute Berhasil Diubah');
     }
 
     /**
@@ -79,6 +104,8 @@ class RuteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $rute = Rute::find($id);
+        $rute->delete();
+        return redirect('rute')->with('success','Rute Berhasil Dihapus');
     }
 }

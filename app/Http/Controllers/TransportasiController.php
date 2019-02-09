@@ -37,7 +37,7 @@ class TransportasiController extends Controller
     public function store(Request $request)
     {
         $transportasi = new Transportasi();
-        $transportasi->id_transportasi = $request->input('id_transportasi');
+        $transportasi->id = $request->input('id');
         $transportasi->nama_transportasi = $request->input('nama_transportasi');
         $transportasi->jumlah_kursi = $request->input('jumlah_kursi');
         $transportasi->keterangan = $request->input('keterangan');
@@ -80,7 +80,6 @@ class TransportasiController extends Controller
     public function update(Request $request)
     {
        $transportasi = Transportasi::find($request->input('id'));
-        $transportasi->id_transportasi = $request->input('id_transportasi');
         $transportasi->nama_transportasi = $request->input('nama_transportasi');
         $transportasi->jumlah_kursi = $request->input('jumlah_kursi');
         $transportasi->keterangan = $request->input('keterangan');

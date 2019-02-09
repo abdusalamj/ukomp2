@@ -12,10 +12,6 @@ Transportasi
         <div class="row">
           <div class="col-md-12"></div>
           <div class="form-group col-md-4">
-            <label for="name">ID Transportasi:</label>
-            <input type="text" class="form-control" name="id_transportasi" value="{{$transportasi->id_transportasi}}">
-          </div>
-          <div class="form-group col-md-4">
             <label for="name">Nama Transportasi:</label>
             <input type="text" class="form-control" name="nama_transportasi" value="{{$transportasi->nama_transportasi}}">
           </div>

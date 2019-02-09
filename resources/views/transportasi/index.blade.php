@@ -13,7 +13,6 @@ Transportasi
     <table class="table table-striped">
     <thead>
       <tr>
-        <th class="text-center">ID Transportasi</th>
         <th class="text-center">Nama Transportasi</th>
         <th class="text-center">Jumlah Kursi</th>
         <th class="text-center">Type Transportasi</th>
@@ -25,7 +24,6 @@ Transportasi
 
       @foreach($data as $transportasi)
       <tr>
-        <td class="text-center">{{$transportasi['id_transportasi']}}</td>
         <td class="text-center">{{$transportasi['nama_transportasi']}}</td>
         <td class="text-center">{{$transportasi['jumlah_kursi']}}</td>
         <td class="text-center">{{$transportasi['type_transportasi']}}</td>

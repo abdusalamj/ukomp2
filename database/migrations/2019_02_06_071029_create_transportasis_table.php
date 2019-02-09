@@ -15,7 +15,6 @@ class CreateTransportasisTable extends Migration
     {
         Schema::create('transportasis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_transportasi');
             $table->string('nama_transportasi');
             $table->integer('jumlah_kursi');
             $table->string('keterangan');

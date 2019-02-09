@@ -15,12 +15,13 @@ class CreateRutesTable extends Migration
     {
         Schema::create('rutes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_rute');
+            $table->string('id_rute');
             $table->string('tujuan');
             $table->string('rute_awal');
             $table->string('rute_akhir');
             $table->string('harga');
-            $table->integer('id_transportasi');
+            $table->integer('id_transportasi')->unsigned();
+            $table->foreign('id_transportasi')->references('id')->on('transportasis')->onDelete('cascade');
             $table->timestamps();
         });
     }
